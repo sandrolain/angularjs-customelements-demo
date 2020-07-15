@@ -1,0 +1,23 @@
+{
+  "name": "angularjs-customelements",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AngularJS CustomElements integration demo",
+  "main": "index.js",
+  "scripts": {
+    "serve:legacy": "npx http-server ./legacy -o",
+    "serve:evolution": "npx http-server ./evolution -o"
+  },
+  "keywords": [
+    "angularjs",
+    "webcomponents",
+    "customelements"
+  ],
+  "author": "Sandro Lain",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "http-server": "^0.12.3",
+    "live-server": "^1.2.1"
+  }
+}
