@@ -11,18 +11,20 @@ export default class ToDoListController {
     this.updateList();
   }
 
-  updateList() {
-    this.ToDoListService.getAll().then((data) => {
-      this.todos = data;
-      this.$scope.$apply();
-    })
+  render() {
+    this.$scope.$apply();
   }
 
-  addTodo() {
-    this.ToDoListService.add({ text: this.todoText, done: false }).then(() => {
-      this.todoText = "";
-      this.updateList();
-    });
+  async updateList() {
+    const data = await this.ToDoListService.getAll();
+    this.todos = data;
+    this.render();
+  }
+
+  async addTodo() {
+    await this.ToDoListService.add({ text: this.todoText, done: false });
+    this.todoText = "";
+    this.updateList();
   }
 
   remaining() {
