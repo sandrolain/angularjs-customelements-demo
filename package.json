@@ -9,7 +9,8 @@
     "watch": "npx rollup -cw",
     "serve:legacy": "npx http-server ./01-legacy -o",
     "serve:evolution-es6": "npx http-server ./02-evolution-es6 -o",
-    "serve:evolution-ts": "npm run build && npx http-server ./03-evolution-ts/dist -o"
+    "serve:evolution-ts": "npm run build && npx http-server ./03-evolution-ts/dist -o",
+    "serve:evolution-lit": "npm run build && npx http-server ./04-evolution-lit/dist -o"
   },
   "keywords": [
     "angularjs",
@@ -45,6 +46,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "angular": "^1.8.0"
+    "angular": "^1.8.0",
+    "lit-element": "^2.3.1"
   }
 }

@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "removeComments": false,
     "noImplicitAny": true,
+    "experimentalDecorators": true,
     "sourceMap": true,
     "lib": ["DOM", "ES2020"],
     "baseUrl": ".",
@@ -15,14 +16,18 @@
     "paths": {
       "*": ["node_modules/*", "03-evolution-ts/src/types/*"]
     },
-    "declaration": true,
-    "declarationDir": "./dist"
+    "declaration": false
   },
-  "include": ["03-evolution-ts/src/**/*"],
+  "include": [
+    "03-evolution-ts/src/**/*",
+    "04-evolution-lit/src/**/*"
+  ],
   "exclude": [
     "node_modules",
     "03-evolution-ts/src/**/*.spec.ts",
-    "03-evolution-ts/dist/**/*.*"
+    "03-evolution-ts/dist/**/*.*",
+    "04-evolution-lit/src/**/*.spec.ts",
+    "04-evolution-lit/dist/**/*.*"
   ],
   "typedocOptions": {
     "mode": "modules",

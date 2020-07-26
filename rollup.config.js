@@ -8,10 +8,53 @@ import copy from "rollup-plugin-copy";
 import commonjs from "@rollup/plugin-commonjs";
 
 export default [
+  // {
+  //   input: "./03-evolution-ts/src/index.ts",
+  //   output: {
+  //     file: "./03-evolution-ts/dist/evolution.js",
+  //     format: "umd",
+  //     name: "app",
+  //     esModule: false,
+  //     sourcemap: true
+  //   },
+  //   plugins: [
+  //     del({
+  //       targets: ["./03-evolution-ts/dist/*"]
+  //     }),
+  //     copy({
+  //       targets: [
+  //         { src: "./03-evolution-ts/static/*", dest: "./03-evolution-ts/dist" }
+  //       ]
+  //     }),
+  //     typescript({
+  //       typescript: require("typescript")
+  //     }),
+  //     // peerDepsExternal(),
+  //     resolve({
+  //       jsnext: true
+  //     }),
+  //     commonjs({
+  //       include: "node_modules/**"
+  //     }),
+  //     postcss({
+  //       extract: false,
+  //       modules: false,
+  //       inject: false,
+  //       minimize: true,
+  //       plugins: []
+  //     }),
+  //     terser({
+  //       output: {
+  //         comments: false
+  //       }
+  //     })
+  //   ]
+  // },
+
   {
-    input: "./03-evolution-ts/src/index.ts",
+    input: "./04-evolution-lit/src/index.ts",
     output: {
-      file: "./03-evolution-ts/dist/evolution.js",
+      file: "./04-evolution-lit/dist/evolution.js",
       format: "umd",
       name: "app",
       esModule: false,
@@ -19,11 +62,11 @@ export default [
     },
     plugins: [
       del({
-        targets: ["./03-evolution-ts/dist/*"]
+        targets: ["./04-evolution-lit/dist/*"]
       }),
       copy({
         targets: [
-          { src: "./03-evolution-ts/static/*", dest: "./03-evolution-ts/dist" }
+          { src: "./04-evolution-lit/static/*", dest: "./04-evolution-lit/dist" }
         ]
       }),
       typescript({
