@@ -1,6 +1,5 @@
 import { ToDoListService, ToDo } from "./ToDoListService";
 import { LitElement, customElement, TemplateResult, CSSResult, html, css, unsafeCSS, property, query } from "lit-element";
-import cssString from "../static/style.css" ;
 
 @customElement("todo-app")
 export class TodoApp extends LitElement {
@@ -15,10 +14,6 @@ export class TodoApp extends LitElement {
   connectedCallback (): void {
     super.connectedCallback();
     this.updateList();
-  }
-
-  static get styles (): CSSResult {
-    return css`${unsafeCSS(cssString)}`;
   }
 
   render (): TemplateResult {

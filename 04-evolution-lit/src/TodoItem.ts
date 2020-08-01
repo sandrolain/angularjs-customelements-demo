@@ -1,6 +1,5 @@
 import { LitElement, html, css, customElement, property, TemplateResult, CSSResult, query, unsafeCSS } from "lit-element";
 import { classMap } from "lit-html/directives/class-map";
-import cssString from "../static/style.css" ;
 
 @customElement("todo-item")
 export class TodoItem extends LitElement {
@@ -11,7 +10,12 @@ export class TodoItem extends LitElement {
   input: HTMLInputElement;
 
   static get styles (): CSSResult {
-    return css`${unsafeCSS(cssString)}`;
+    return css`
+    .done-true {
+      text-decoration: line-through;
+      color: grey;
+    }
+    `;
   }
 
   render (): TemplateResult {
